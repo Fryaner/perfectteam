@@ -38,7 +38,12 @@ const store = useCounterStore()
 .header {
     display: flex;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px;
+
+    @media screen and (max-width: $limit-mobile){
+        padding: 10px;  
+        padding-bottom: 30px;
+    }
 
     &__logo {
         display: flex;
