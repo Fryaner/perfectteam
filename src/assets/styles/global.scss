@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $color-black;
+    font-family: "Roboto Condensed", serif;
+}
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+body.active {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+input,button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
