@@ -221,7 +221,7 @@ const store = useCounterStore()
             width: 100%;
             height: 4px;
             border-radius: 10px;
-            background-color: $color-bg-title;
+            background-color: $color-logo;
         }
 
         &-top {
