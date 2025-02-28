@@ -209,7 +209,7 @@ const store = useCounterStore()
         display: none;
         position: relative;
         width: 40px;
-        height: 30px;
+        height: 25px;
         z-index: 20;
 
         @media screen and (max-width: $limit-mobile) {
@@ -225,12 +225,14 @@ const store = useCounterStore()
         }
 
         &-top {
+        width: 60%;
             top: 0;
+            left: 2px;
             transform: rotate(0);
             transition: .5s;
 
             &.active {
-                top: 12px;
+                top: 6px;
                 transform: rotate(45deg);
             }
         }
@@ -242,18 +244,20 @@ const store = useCounterStore()
             transform: translateY(-50%);
 
             &.active { 
-                display: none;
+                transform: rotate(-45deg);
             }
         }
 
         &-bottom {
+            width: 60%;
             bottom: 0;
+            right: 2px;
             transform: rotate(0);
             transition: .5s;
 
             &.active { 
-                bottom: 13px;
-                transform: rotate(-45deg);
+                bottom: 3px;
+                transform: rotate(45deg);
             }
         }
     }
