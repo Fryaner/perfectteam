@@ -19,6 +19,7 @@
 
     @media screen and (max-width: $limit-mobile) {
         font-size: 24px;  
+        padding: 20px 20px;
     }
 }
 </style>
