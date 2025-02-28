@@ -138,8 +138,8 @@
             "Image"
             "Info"
             "Button";
+            grid-template-columns: 1fr;
         }
-        grid-template-columns: 1fr;
     }
 
     &__item-to {
