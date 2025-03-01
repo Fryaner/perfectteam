@@ -85,7 +85,7 @@
                     <button class="price__btn">Оставить заявку</button>
                 </div>
             </div>
-            <div class="price__section-2 mb-40">
+            <div class="price__section-2 mb-40" id="begin-show">
                 <h3 class="price__title-2">КАДРОВЫЙ АУДИТ</h3>
                 <p class="price__description-2">Анализ по типичным ошибкам (делается на основании выборки кадровых документов без анализа каждого документа по каждому работнику)</p>
                 <div class="price__items-2">
@@ -230,7 +230,8 @@
                 </div>
             </div>
             <div class="price__btn-main">
-                <button @click="showOther" >{{isActive ? 'Скрыть' : 'Показать больше'}}</button>
+                <a v-if="isActive" href="#begin-show"><button @click="showOther">Скрыть</button></a>
+                <button v-else @click="showOther" >Показать больше</button>
             </div>
         </div>
     </section>

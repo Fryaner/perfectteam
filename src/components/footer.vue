@@ -20,7 +20,7 @@
 <style lang="scss" scoped>
 .footer {
     margin-top: 100px;
-    padding: 50px 0;
+    padding: 50px 10px;
     border-top: 1px solid $color-black;
     display: flex;
     flex-direction: column;
