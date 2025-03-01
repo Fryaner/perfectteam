@@ -85,11 +85,171 @@
                     <button class="price__btn">Оставить заявку</button>
                 </div>
             </div>
+            <div class="price__section-2 mb-40">
+                <h3 class="price__title-2">КАДРОВЫЙ АУДИТ</h3>
+                <p class="price__description-2">Анализ по типичным ошибкам (делается на основании выборки кадровых документов без анализа каждого документа по каждому работнику)</p>
+                <div class="price__items-2">
+                    <div class="price__item-2">
+                        <h4 class="price__subtitle-2">От 1 до 30 сотрудников</h4>
+                        <div class="price__bottom">
+                            <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                            <button class="price__btn">Оставить заявку</button>
+                        </div>
+                    </div>
+                    <div class="price__item-2">
+                        <h4 class="price__subtitle-2">От 31 до 60 сотрудников</h4>
+                        <div class="price__bottom">
+                            <p class="price__price">Стоимость: 150 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                            <button class="price__btn">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div :class="isActive ? 'price__show active' : 'price__show'">
+                <div class="price__section-2">
+                    <h3 class="price__title-2">ВОССТАНОВЛЕНИЕ КАДРОВОГО УЧЕТА</h3>
+                    <div class="price__items-2">
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Кадровые документы (приказы, личные карточки, журналы) за документ</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Кадровые документы  (положения, инструкции) за документ</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 7 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__section-2">
+                    <h3 class="price__title-2">ТЕСТИРОВАНИЕ ПЕРСОНАЛА</h3>
+                    <div class="price__items-2">
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Полный психологический портрет соискателя</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">От 1-4 кандидатов</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 17 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Более 5 кандидатов</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 16 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__section-2">
+                    <h3 class="price__title-2">Миграционное сопровождение сотрудников</h3>
+                    <div class="price__items-2">
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Проверим действительность патента   </h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Ежемесячный мониторинг сроков действия разрешительных документов</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Подадим уведомление в МВД о приеме / увольнении мигранта</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Проведем аудит договора с сотрудником-иностранцем</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 3 000 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">Комплекс вышеназванных услуг</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 6 500 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__section-2">
+                    <h3 class="price__title-2">КОНСУЛЬТАЦИЯ КЛИНИЧЕСКОГО ПСИХОЛОГА</h3>
+                    <div class="price__items-2">
+                        <div class="price__item-2">
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__section-2 mb-40">
+                    <h3 class="price__title-2">Стоимость услуг «Ведение воинского учета»</h3>
+                    <div class="price__items-2">
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">До 20 штатных сотрудников</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 35 000 <img src="@/assets/icons/ruble.svg" alt=""/> в месяц</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">От 21 до 50 штатных сотрудников</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 40 000 <img src="@/assets/icons/ruble.svg" alt=""/> в месяц</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                        <div class="price__item-2">
+                            <h4 class="price__subtitle-2">От 51 до 100 штатных сотрудников</h4>
+                            <div class="price__bottom">
+                                <p class="price__price">Стоимость: 45 000 <img src="@/assets/icons/ruble.svg" alt=""/> в месяц</p>
+                                <button class="price__btn">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price__btn-main">
+                <button @click="showOther" >Показать больше</button>
+            </div>
         </div>
     </section>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+
+const isActive = ref(false)
+
+function showOther() {
+    isActive.value = !isActive.value
+}
+</script>
+
 <style lang="scss" scoped>
+.mb-40 {
+    margin-bottom: 40px;
+}
 .price {
     padding: 70px 20px;
     padding-bottom: 0;
@@ -104,21 +264,52 @@
     &__main {
         display: flex;
         flex-direction: column;
-        gap: 40px;
     }
 
     &__section {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $limit-mobile) {
+            gap: 20px; 
+        }
     }
 
     &__title {
         font-size: 28px;
         font-weight: 700;
+        text-transform: uppercase;
 
         @media screen and (max-width: $limit-mobile) {
             font-size: 20px;  
+        }
+    }
+
+    &__title-2 {
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 20px;  
+            margin-bottom: 20px;
+        }
+    }
+
+    &__show {
+        max-height: 0;
+        overflow: hidden;
+        transition: 1s;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &.active {
+            max-height: 5000px;
         }
     }
 
@@ -265,6 +456,99 @@
 
         @media screen and (max-width: $limit-mobile){
             font-size: 18px;
+        }
+    }
+
+    &__btn-main {
+        display: flex;
+        justify-content: center;
+        // margin-top: 40px;
+
+        button {
+            border: 1px solid $color-btn;
+            background-color: $color-btn;
+            color: $color-white;
+            font-weight: 700;
+            border-radius: 5px;
+            padding: 15px 60px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: .5s;
+            text-align: center;
+            grid-area: Button;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-btn;   
+                }
+            }
+
+            @media screen and (max-width: $limit-mobile){
+                font-size: 18px;
+            } 
+        }       
+    }
+
+    &__section-2 {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5px;
+    }
+
+    &__description-2 {
+        margin: 0 0 40px 0;
+        font-size: 20px;
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 16px;  
+        }
+    }
+
+    &__items-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       column-gap: 80px;
+       row-gap: 30px;
+
+       @media screen  and (max-width: $limit-tablet){
+        grid-template-columns: 1fr;
+       }
+    }
+
+    &__item-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        box-shadow: 0px 0px 10px 0 $color-black;
+        border-radius: 5px;
+        padding: 30px;
+
+        @media screen and (max-width: $limit-mobile) {
+            padding: 15px; 
+        }
+    }
+
+    &__subtitle-2 {
+        font-size: 20px;
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 16px;  
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__price {
+        display: flex;
+        gap: 5px;
+        font-size: 18px;
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 16px;  
         }
     }
 }
