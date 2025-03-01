@@ -67,6 +67,7 @@ onMounted(() => {
 <style lang="scss">
 .swiper {
     width: 80%;
+    border-radius: 20px;
 
     @media screen and (max-width: $limit-tablet) {
         width: 90%;
@@ -77,7 +78,6 @@ onMounted(() => {
     }   
 }
 
-/* Изменение цвета стрелок */
 .swiper-button-prev,
 .swiper-button-next {
     color: $color-black;
@@ -97,13 +97,15 @@ onMounted(() => {
     &__item {
         display: flex;
         gap: 40px;
-        padding: 0 80px;
+        padding: 20px 80px;
+        background-color: $color-bg-title;
+        border-radius: 20px;
 
         @media screen and (max-width: $limit-mobile) {
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            padding: 0 60px;
+            padding: 20px 60px;
         }   
     }
 

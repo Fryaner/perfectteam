@@ -304,7 +304,6 @@ function showOther() {
         max-height: 0; 
         overflow: hidden;
         transition: max-height 1s; 
-        padding: 0 10px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -514,6 +513,7 @@ function showOther() {
         grid-template-columns: 1fr 1fr;
        column-gap: 80px;
        row-gap: 30px;
+       padding: 0 10px;
 
        @media screen  and (max-width: $limit-tablet){
         grid-template-columns: 1fr;
@@ -524,9 +524,18 @@ function showOther() {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        box-shadow: 0px 0px 10px 0 $color-black;
+        filter: drop-shadow(0px 0px 2px $color-black);
         border-radius: 5px;
         padding: 30px;
+        transition: .5s;
+        cursor: pointer;
+        background-color: $color-white;
+
+        @media (hover: hover) {
+            &:hover {
+                filter: drop-shadow(0px 0px 10px $color-btn);
+            }
+        }
 
         @media screen and (max-width: $limit-mobile) {
             padding: 15px; 

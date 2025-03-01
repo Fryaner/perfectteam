@@ -94,7 +94,7 @@
         flex-direction: column;
         padding: 30px;
         background-color: $color-white;
-        filter: drop-shadow(0px 0px 4px $color-black);
+        filter: drop-shadow(0px 0px 2px $color-black);
         border-radius: 10px;
         gap: 30px;
         cursor: pointer;

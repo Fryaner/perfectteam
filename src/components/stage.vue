@@ -76,7 +76,7 @@
         background-color: $color-white;
         transition: 0.5s;
         cursor: pointer;
-        filter: drop-shadow(0px 0px 4px $color-black);
+        filter: drop-shadow(0px 0px 2px $color-black);
         border-radius: 10px;
 
         @media (hover:hover) {
