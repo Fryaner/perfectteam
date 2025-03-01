@@ -45,6 +45,7 @@ function changeAccordeon() {
         transition: .5s;
         max-height: 0;
         overflow: hidden;
+        padding-top: 0;
     }
 
     &.active {
@@ -52,7 +53,12 @@ function changeAccordeon() {
     }
 
     &.active &__answer{
-        max-height: 20px;
+        max-height: 30px;
+        padding-top: 10px;
+
+        @media screen and (max-width: $limit-mobile) {
+            max-height: 50px;
+        }
     }
 }
 </style>

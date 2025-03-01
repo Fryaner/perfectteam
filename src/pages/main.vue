@@ -3,9 +3,10 @@
     <About/>
     <Services/>
     <Stage/>
-    <Faq/>
     <Price/>
+    <Faq/>
     <Feedback/>
+    <Reviews/>
 </template>
 
 <script setup>
@@ -16,4 +17,5 @@ import Stage from '@/components/stage.vue';
 import Faq from '@/components/faq.vue';
 import Price from '@/components/price.vue';
 import Feedback from '@/components/feedback.vue';
+import Reviews from '@/components/reviews.vue';
 </script>

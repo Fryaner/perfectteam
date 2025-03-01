@@ -10,7 +10,7 @@
                             Сколько времени занимает подбор персонала?
                         </template>
                         <template v-slot:answer>
-                            Ответ
+                            Подбор персонала по заявке заказчика от 3 до 14 дней.
                         </template>
                     </Accordeon>
                 </div>
@@ -20,7 +20,7 @@
                             Какие гарантии вы предоставляете?
                         </template>
                         <template v-slot:answer>
-                            Ответ
+                            Гарантии  по договору от 30 дней до 90 дней.
                         </template>
                     </Accordeon>
                 </div>
@@ -30,7 +30,7 @@
                             Как происходит оплата?
                         </template>
                         <template v-slot:answer>
-                            Ответ
+                            Гибкая система оплаты .
                         </template>
                     </Accordeon>
                 </div>
@@ -40,7 +40,7 @@
                             Можно ли заказать только часть услуг?
                         </template>
                         <template v-slot:answer>
-                            Ответ
+                            Да ,можно.
                         </template>
                     </Accordeon>
                 </div>
