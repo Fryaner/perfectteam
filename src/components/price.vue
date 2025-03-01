@@ -41,7 +41,7 @@
                         <img src="@/assets/images/priceOne.png" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за одну вакансию</h4>
-                    <p class="price__to">от 50 000 рублей.</p>
+                    <p class="price__to">от 60 000 рублей.</p>
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара агентства. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
@@ -56,7 +56,7 @@
                         <img src="@/assets/images/priceOneSpecial.png" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за одну вакансию на рабочие специальности</h4>
-                    <p class="price__to">от 60 000 рублей.</p>
+                    <p class="price__to">от 50 000 рублей.</p>
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара агентства оплачивается предварительная часть расходов на поиск. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
@@ -68,13 +68,13 @@
                 </div>
             </div>
             <div class="price__section">
-                <h3 class="price__title">ПОДБОР ЛИНЕЙНОГО ПЕРСОНАЛА</h3>
+                <h3 class="price__title">МАССОВЫЙ ПОДБОР ПЕРСОНАЛА</h3>
                 <div class="price__item price__item-to">
                     <div class="price__image">
                         <img src="@/assets/images/priceMany.png" alt=""/>
                     </div>
-                    <h4 class="price__subtitle">Стоимость подбора за одну вакансиюСтоимость подбора за каждого трудоустроенного сотрудника</h4>
-                    <p class="price__to">от 50 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников</p>
+                    <h4 class="price__subtitle">Стоимость подбора за каждого трудоустроенного сотрудника</h4>
+                    <p class="price__to">от 40 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников</p>
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 10% от суммы гонорара агентства. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
