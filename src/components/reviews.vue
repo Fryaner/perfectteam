@@ -114,7 +114,6 @@ onMounted(() => {
         height: 200px;
         object-fit: cover;
         border-radius: 100%;
-        border: 1px solid $color-black;
 
         @media screen and (max-width: $limit-tablet) {
             width: 150px;
