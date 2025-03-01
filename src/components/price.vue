@@ -230,7 +230,7 @@
                 </div>
             </div>
             <div class="price__btn-main">
-                <button @click="showOther" >Показать больше</button>
+                <button @click="showOther" >{{isActive ? 'Скрыть' : 'Показать больше'}}</button>
             </div>
         </div>
     </section>
@@ -300,16 +300,20 @@ function showOther() {
     }
 
     &__show {
-        max-height: 0;
+        max-height: 0; 
         overflow: hidden;
-        transition: 1s;
+        transition: max-height 1s; 
         padding: 0 10px;
         display: flex;
         flex-direction: column;
         gap: 30px;
 
         &.active {
-            max-height: 5000px;
+            max-height: 2500px; 
+
+            @media screen and (max-width: $limit-mobile) {
+                max-height: 3500px;   
+            }
         }
     }
 
