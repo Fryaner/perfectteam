@@ -1,5 +1,5 @@
 <template>
-    <section class="services">
+    <section class="services" id="services">
         <Title>КОМПЛЕКСНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</Title>
         <div class="services__items">
             <div class="services__item">

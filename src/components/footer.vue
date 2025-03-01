@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer__info">
             <p class="footer__mail"><span>Email: </span>hrfectteam@yandex.ru, hrfectteam@mail.ru</p>
             <p class="footer__phone"><span>Phone: </span>+7 901 718 34 60 </p>
@@ -35,16 +35,25 @@
     }
 
     &__mail, &__phone, &__timing {
+        text-align: center;
         font-size: 24px;
 
         span {
             font-weight: 700;
+        }
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 20px;
         }
     }
 
     &__site {
         font-size: 32px;
         font-weight: 700;
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 24px;
+        }
     }
 
     &__social {
@@ -55,6 +64,11 @@
     &__title {
         font-size: 32px;
         letter-spacing: 1px;
+        text-align: center;
+
+        @media screen and (max-width: $limit-mobile) {
+            font-size: 24px;
+        }
     }
 }
 </style>

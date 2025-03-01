@@ -1,5 +1,5 @@
 <template>
-    <section class="about">
+    <section class="about" id="about">
         <Title>Почему выбирают нас</Title>
         <div class="about__main">
             <div class="about__items">

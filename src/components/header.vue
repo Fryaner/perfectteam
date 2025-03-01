@@ -6,11 +6,11 @@
   <div class="header__info" :class="{active: store.isActive}">
     <nav class="header__nav">
         <ul class="header__list">
-            <li class="header__link" ><router-link to="">ГЛАВНАЯ</router-link></li>
-            <li class="header__link"><router-link to="">О НАС</router-link></li>
-            <li class="header__link"><router-link to="">КОНТАКТЫ</router-link></li>
-            <li class="header__link"><router-link to="">УСЛУГИ</router-link></li>
-            <li class="header__link"><router-link to="">ЦЕНЫ</router-link></li>
+            <li class="header__link" ><a @click="store.closeBurgerMenu" href="#main">ГЛАВНАЯ</a></li>
+            <li class="header__link"><a @click="store.closeBurgerMenu" href="#about">О НАС</a></li>
+            <li class="header__link"><a @click="store.closeBurgerMenu" href="#footer">КОНТАКТЫ</a></li>
+            <li class="header__link"><a @click="store.closeBurgerMenu" href="#services">УСЛУГИ</a></li>
+            <li class="header__link"><a @click="store.closeBurgerMenu" href="#price">ЦЕНЫ</a></li>
         </ul>
     </nav>
     <div class="header__contacts">

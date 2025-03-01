@@ -1,14 +1,20 @@
 <script setup>
 import Header from '@/components/header.vue'
 import Footer from './components/footer.vue';
-import { useCounterStore } from './store';
-const store = useCounterStore()
+import Main from './pages/main.vue';
+
+function scrollTop() {
+  window.scrollTo(0, 0)
+}
 </script>
 
 <template>
   <div class="wrapper">
+    <button @click="scrollTop" class="scroll"><ArrowTop/></button>
     <Header/>
-    <RouterView/>
+    <main class="main">
+      <Main/>
+    </main>
     <Footer/>
   </div>
 </template>
@@ -17,5 +23,32 @@ const store = useCounterStore()
 .wrapper {
   position: relative;
   overflow-x: hidden;
+}
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10;
+  cursor: pointer;
+
+  @media screen and (max-width: $limit-mobile){
+    bottom: 15px;
+    right: 15px;   
+  }
+
+  svg {
+      transition: .5s;
+      fill: $color-black;
+      stroke: $color-white;
+    }
+
+  @media (hover:hover) {
+    &:hover {
+    svg {
+      fill: $color-white;
+      stroke: $color-black;
+    }
+  }
+  }
 }
 </style>

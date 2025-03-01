@@ -1,5 +1,5 @@
 <template>
-    <section class="price">
+    <section class="price" id="price">
         <Title>ГИБКИЕ ЦЕНОВЫЕ УСЛОВИЯ ДЛЯ ВАШЕГО БИЗНЕСА</Title>
         <div class="price__main">
             <div class="price__section">

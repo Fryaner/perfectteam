@@ -1,5 +1,5 @@
 <template>
-    <div class="banner">
+    <div class="banner" id="main">
         <div class="banner__info">
             <section class="banner__top">
                 <h1 class="banner__title">Профессионалы для вашего бизнеса!</h1>
