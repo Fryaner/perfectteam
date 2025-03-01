@@ -5,6 +5,7 @@
     <Stage/>
     <Faq/>
     <Price/>
+    <Feedback/>
 </template>
 
 <script setup>
@@ -14,4 +15,5 @@ import Services from '@/components/services.vue';
 import Stage from '@/components/stage.vue';
 import Faq from '@/components/faq.vue';
 import Price from '@/components/price.vue';
+import Feedback from '@/components/feedback.vue';
 </script>
