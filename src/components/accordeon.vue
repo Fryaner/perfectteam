@@ -22,13 +22,23 @@ function changeAccordeon() {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    transition: .5s;
+    cursor: pointer;
 
     &__question {
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 16px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        img {
+            rotate: (0);
+            transition: .5s;
+        }
+
+        &.active img {
+            rotate: (-180deg);
+        }
     }
 
     &__answer{
@@ -37,8 +47,12 @@ function changeAccordeon() {
         overflow: hidden;
     }
 
+    &.active {
+        background-color: $color-bg-title;
+    }
+
     &.active &__answer{
-        max-height: 500px;
+        max-height: 20px;
     }
 }
 </style>

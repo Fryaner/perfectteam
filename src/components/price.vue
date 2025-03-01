@@ -467,7 +467,6 @@ function showOther() {
     &__btn-main {
         display: flex;
         justify-content: center;
-        // margin-top: 40px;
 
         button {
             border: 1px solid $color-btn;
