@@ -30,6 +30,7 @@ function changeAccordeon() {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-weight: 500;
 
         img {
             rotate: (0);
