@@ -1,5 +1,6 @@
 <script setup>
 import Header from '@/components/header.vue'
+import Footer from './components/footer.vue';
 import { useCounterStore } from './store';
 const store = useCounterStore()
 </script>
@@ -8,90 +9,7 @@ const store = useCounterStore()
   <div class="wrapper">
     <Header/>
     <RouterView/>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
-    <footer>fff</footer>
+    <Footer/>
   </div>
 </template>
 

@@ -105,8 +105,19 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+        
+        &:focus-within {
+            label {
+                font-weight: 700;
+            }
+
+            input {
+                border-width: 2px;
+            }
+        }
 
         label {
+            transition: .5s;
             font-size: 16px;
         }
 
