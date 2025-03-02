@@ -5,49 +5,53 @@
         <img @click="store.closeModal" class="form__close" src="@/assets/icons/close.svg" alt=""/>
         <div class="form__header">
             <p class="form__title">{{store.type}}</p>
-            <input v-show="false" v-model="store.type" name="Тип Заявки"/>
             <p class="form__subtitle" v-if="store.service">{{ store.service }}</p>
-            <input v-show="false" v-model="store.service" name="Услуга"/>
         </div>
-        <form class="form__form">
+        <form action="https://formspree.io/f/mrbeyypl" method="POST" class="form__form" @submit="send">
+            <input v-show="false" v-model="store.type" name="Тип Заявки"/>
+            <input v-show="false" v-model="store.service" name="Услуга"/>
             <div class="form__list">
                 <div class="form__input">
-                    <label for="user">Имя</label>
+                    <label :class="{ errorText: v$.user.$errors.length }" for="user">Имя</label>
                     <div class="form__user">
                         <user/>
-                        <input type="text" id="user"/>
+                        <input name="Имя" :class="{ error: v$.user.$errors.length }" v-model="state.user" type="text" id="user"/>
                     </div>
+                    <p :class="{ errorText: v$.user.$errors.length }" v-if="v$.user.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="form__input">
-                    <label for="phone">Номер телефона</label>
+                    <label :class="{ errorText: v$.phone.$errors.length }" for="phone">Номер телефона</label>
                     <div class="form__phone">
                         <phone/>
-                        <input type="text" id="phone"/>
+                        <input @input="formatPhoneNumber" name="Номер телефона" :class="{ error: v$.phone.$errors.length }" v-model="state.phone" type="text" id="phone"/>
                     </div>
+                    <p :class="{ errorText: v$.phone.$errors.length }" v-if="v$.phone.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="form__input">
-                    <label for="mail">Email</label>
+                    <label :class="{ errorText: v$.mail.$errors.length }" for="mail">Email</label>
                     <div class="form__mail">
                         <mail/>
-                        <input type="text" id="mail"/>
+                        <input name="Почта" :class="{ error: v$.mail.$errors.length }" v-model="state.mail" type="text" id="mail"/>
                     </div>
+                    <p :class="{ errorText: v$.mail.$errors.length }" v-if="v$.mail.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div v-if="store.type === 'Задать вопрос'" class="form__input">
-                    <label for="qusetion">Вопрос</label>
+                    <label :class="{ errorText: v1$.commentValue.$errors.length }" for="qusetion">Вопрос</label>
                     <div class="form__mail">
                         <comment/>
-                        <input type="text" id="qusetion"/>
+                        <input :class="{ error: v1$.commentValue.$errors.length }" v-model="state1.commentValue" type="text" name="Вопрос" id="qusetion"/>
                     </div>
+                    <p :class="{ errorText: v1$.commentValue.$errors.length }" v-if="v1$.commentValue.$errors.length">Необходимо заполнить поле</p>
                 </div>
             </div>
             <div class="form__footer">
                 <div class="form__btns">
-                    <button class="form__send">Отправить</button>
-                    <button type="button" class="form__closed" @click="store.closeModal">Отменить</button>
+                    <button type="submit" class="form__send" :disabled="!isCheck">Отправить</button>
+                    <button type="button" class="form__closed" @click="close">Отменить</button>
                 </div>
                 <div class="form__check">
                     <label for="check">Соглашаюсь с <a href="">обработкой персональных данных</a></label>
-                    <input type="checkbox" id="check"/>
+                    <input v-model="isCheck" type="checkbox" id="check"/>
                 </div>
             </div>
         </form>
@@ -62,9 +66,57 @@ import phone from '@/assets/icons/phone.vue';
 import mail from '@/assets/icons/mail.vue';
 import comment from '@/assets/icons/comment.vue';
 import { useCounterStore } from '@/store';
-import { onMounted } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
+import { useVuelidate } from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
 
 const store = useCounterStore()
+
+const isCheck = ref(false)
+
+const state = reactive({
+      user: '',
+      phone: '',
+      mail: '',
+    })
+
+const state1 = reactive({
+    commentValue: ''
+})
+const rule = { commentValue: {required}}
+
+const rules = {
+    user: { required }, 
+    phone: { required }, 
+    mail: { required, email }
+}
+
+function formatPhoneNumber() {
+    state.phone = state.phone.replace(/[^0-9]/g, '');
+    if (state.phone.length > 11) {
+    state.phone = state.phone.slice(0, 11);
+    }
+}
+
+const v1$ = useVuelidate(rule, state1)
+const v$ = useVuelidate(rules, state)
+
+async function send(event) {
+    const result = await v$.value.$validate()
+    const resultComment = await v1$.value.$validate()
+    if (!result && !resultComment) {
+        event.preventDefault()
+        return
+    } 
+}
+
+function close() {
+    state.user = ''
+    state.phone = ''
+    state.mail = ''
+    state.comment = ''
+    store.closeModal()
+}
 
 onMounted(() => {
     document.body.addEventListener('mousedown', function test(event) {
@@ -76,6 +128,10 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.errorText {
+    transition: .5s;
+    color: rgb(251, 68, 68);
+}
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
@@ -193,6 +249,10 @@ onMounted(() => {
             }
         }
 
+        .error {
+    border: 1px solid rgb(251, 68, 68);
+}
+
         &:focus-within {
             label {
                 font-weight: 700;
@@ -256,6 +316,18 @@ onMounted(() => {
         text-align: center;
         grid-area: Button;
 
+        &:disabled {
+            cursor: default;
+            border: 1px solid gray;
+            background-color: gray;
+            color: $color-white;
+
+            &:hover {
+                background-color: gray;
+                color: $color-white;  
+            }
+        }
+
         @media (hover: hover) {
             &:hover {
                 background-color: $color-white;
@@ -283,8 +355,8 @@ onMounted(() => {
 
         @media (hover: hover) {
             &:hover {
-                background-color: $color-white;
-                color: $color-btn;   
+                background-color: $color-btn;
+                color: $color-white;   
             }
         }
 

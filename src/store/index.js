@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 export const useCounterStore = defineStore('counter', () => {
     const isActive = ref(false)
     const isOpen = ref(false)
-    const type = ref(0)
+    const type = ref('')
     const service = ref('')
 
     function targetModal(__type, __service = '') {
