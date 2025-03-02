@@ -2,7 +2,6 @@
 import Header from '@/components/header.vue'
 import Footer from './components/footer.vue';
 import Main from './pages/main.vue';
-import { onMounted } from 'vue';
 
 if (window.location.hash) {
     history.replaceState({}, document.title, window.location.pathname + window.location.search);
@@ -15,6 +14,7 @@ function scrollTop() {
 
 <template>
   <div class="wrapper">
+    <Modal/>
     <button @click="scrollTop" class="scroll"><ArrowTop/></button>
     <Header/>
     <main class="main">

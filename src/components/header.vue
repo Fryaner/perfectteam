@@ -16,7 +16,7 @@
     <div class="header__contacts">
         <a href="tel:+79017183460" class="header__phone">+7 901 718 34 60</a>
         <div class="header__btn">
-            <button>Заказать звонок</button>
+            <button @click="store.targetModal(1)">Заказать звонок</button>
             <p>На связи ежедневно с 9:00 до 21:00</p>
         </div>
     </div>
