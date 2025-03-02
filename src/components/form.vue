@@ -2,7 +2,7 @@
     <Transition>
     <section v-if="store.isOpen" class="form-container">
         <section class="form">
-        <img @click="store.closeModal" class="form__close" src="@/assets/icons/close.svg" alt=""/>
+        <img @click="close" class="form__close" src="@/assets/icons/close.svg" alt=""/>
         <div class="form__header">
             <p class="form__title">{{store.type}}</p>
             <p class="form__subtitle" v-if="store.service">{{ store.service }}</p>
@@ -111,10 +111,18 @@ async function send(event) {
 }
 
 function close() {
+    v$.value.$reset();
+    v1$.value.$reset();
+    store.closeModal()
+}
+
+function closed() {
     state.user = ''
     state.phone = ''
     state.mail = ''
     state.comment = ''
+    v$.value.$reset();
+    v1$.value.$reset();
     store.closeModal()
 }
 

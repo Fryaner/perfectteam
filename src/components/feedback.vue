@@ -3,25 +3,29 @@
         <Title>НУЖНЫ КАЧЕСТВЕННЫЕ СОТРУДНИКИ В КОМАНДУ?</Title>
         <div class="feedback__main">
             <h3 class="feedback__title">Оставьте заявку, и мы свяжемся с вами</h3>
-            <form class="feedback__form">
+            <form action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="feedback__form">
                 <div class="feedback__image">
                     <img src="@/assets/images/feedback.png" alt=""/>
                 </div>
                 <div class="feedback__input feedback__input-user">
-                    <label for="user">Имя</label>
-                    <input type="text" id="user"/>
+                    <label :class="{ errorText: v$.user.$errors.length }" for="user">Имя</label>
+                    <input name="Имя" :class="{ error: v$.user.$errors.length }" v-model="state.user" type="text" id="user"/>
+                    <p :class="{ errorText: v$.user.$errors.length }" v-if="v$.user.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="feedback__input feedback__input-phone">
-                    <label for="phone">Телефон</label>
-                    <input type="text" id="phone"/>
+                    <label :class="{ errorText: v$.phone.$errors.length }" for="phone">Телефон</label>
+                    <input @input="formatPhoneNumber" name="Номер телефона" :class="{ error: v$.phone.$errors.length }" v-model="state.phone" type="tel" id="phone"/>
+                    <p :class="{ errorText: v$.phone.$errors.length }" v-if="v$.phone.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="feedback__input feedback__input-email">
-                    <label for="mail">Email</label>
-                    <input type="text" id="mail"/>
+                    <label :class="{ errorText: v$.mail.$errors.length }" for="mail">Email</label>
+                    <input name="Почта" :class="{ error: v$.mail.$errors.length }" v-model="state.mail" type="mail" id="mail"/>
+                    <p :class="{ errorText: v$.mail.$errors.length }" v-if="v$.mail.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="feedback__input feedback__input-comment">
-                    <label for="comment">Комментарий</label>
-                    <input type="text" id="comment"/>
+                    <label :class="{ errorText: v$.mail.$errors.length }" for="comment">Комментарий</label>
+                    <input :class="{ error: v1$.commentValue.$errors.length }" v-model="state1.commentValue" type="text" name="Вопрос" id="comment"/>
+                    <p :class="{ errorText: v1$.commentValue.$errors.length }" v-if="v1$.commentValue.$errors.length">Необходимо заполнить поле</p>
                 </div>
                 <div class="feedback__btn">
                     <button>Оставить заявку</button>
@@ -31,7 +35,52 @@
     </section>
 </template>
 
+<script setup>
+import { reactive } from 'vue';
+import { useVuelidate } from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
+
+const state = reactive({
+      user: '',
+      phone: '',
+      mail: '',
+    })
+
+const state1 = reactive({
+    commentValue: ''
+})
+const rule = { commentValue: {required}}
+
+const rules = {
+    user: { required }, 
+    phone: { required }, 
+    mail: { required, email }
+}
+
+function formatPhoneNumber() {
+    state.phone = state.phone.replace(/[^0-9]/g, '');
+    if (state.phone.length > 11) {
+    state.phone = state.phone.slice(0, 11);
+    }
+}
+
+const v1$ = useVuelidate(rule, state1)
+const v$ = useVuelidate(rules, state)
+
+async function send(event) {
+    const result = await v$.value.$validate()
+    const resultComment = await v1$.value.$validate()
+    if (!result && !resultComment) {
+        event.preventDefault()
+        return
+    } 
+}
+</script>
+
 <style lang="scss" scoped>
+.errorText {
+    color: rgb(251, 68, 68);
+}
 .feedback {
     padding: 70px 20px;
     padding-bottom: 0;
@@ -105,6 +154,11 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
+        .error {
+            transition: .5s;
+        border: 1px solid rgb(251, 68, 68);
+    }
         
         &:focus-within {
             label {
@@ -113,6 +167,7 @@
 
             input {
                 border-width: 2px;
+                transition: .5s;
             }
         }
 

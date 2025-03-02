@@ -9,23 +9,23 @@
                 <button @click="store.targetModal('Получить консультацию')">Получить консультацию</button>
             </div>
         </div>
-        <form class="banner__form">
+        <form autocomplete="off" action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="banner__form">
             <div class="banner__inputs">
                 <div class="banner__input">
                     <user/>
-                    <input class="banner__input-name" type="text" placeholder="Имя"/> 
+                    <input placeholder="Имя" name="Имя" :class="{ error: v$.user.$errors.length }" v-model="state.user" type="text" id="user"/>
                 </div>
                 <div class="banner__input"> 
                     <mail/>   
-                    <input class="banner__input-mail" type="text" placeholder="Mail"/>
+                    <input placeholder="Почта" name="Почта" :class="{ error: v$.mail.$errors.length }" v-model="state.mail" type="text" id="mail"/>
                 </div>
                 <div class="banner__input">
                     <comment/>
-                    <input class="banner__input-comment"  type="text" placeholder="Комментарий"/>
+                    <input placeholder="Комментарий" :class="{ error: v1$.commentValue.$errors.length }" v-model="state1.commentValue" type="text" name="Вопрос" id="qusetion"/>
                 </div>
                 <div class="banner__input">
                     <phone/>
-                    <input class="banner__input-phone" type="text" placeholder="Номер телефона"/>       
+                    <input placeholder="Номер телефона" @input="formatPhoneNumber" name="Номер телефона" :class="{ error: v$.phone.$errors.length }" v-model="state.phone" type="text" id="phone"/>
                 </div>    
             </div>
             <button class="banner__btn-form">Оставить заявку</button>
@@ -38,9 +38,48 @@ import phone from '@/assets/icons/phone.vue'
 import comment from '@/assets/icons/comment.vue'
 import user from '@/assets/icons/user.vue'
 import mail from '@/assets/icons/mail.vue'
-
 import {useCounterStore} from '@/store/index'
+import { reactive } from 'vue'
+import { useVuelidate } from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
+
 const store = useCounterStore()
+
+const state = reactive({
+      user: '',
+      phone: '',
+      mail: '',
+    })
+
+const state1 = reactive({
+    commentValue: ''
+})
+const rule = { commentValue: {required}}
+
+const rules = {
+    user: { required }, 
+    phone: { required }, 
+    mail: { required, email }
+}
+
+function formatPhoneNumber() {
+    state.phone = state.phone.replace(/[^0-9]/g, '');
+    if (state.phone.length > 11) {
+    state.phone = state.phone.slice(0, 11);
+    }
+}
+
+const v1$ = useVuelidate(rule, state1)
+const v$ = useVuelidate(rules, state)
+
+async function send(event) {
+    const result = await v$.value.$validate()
+    const resultComment = await v1$.value.$validate()
+    if (!result && !resultComment) {
+        event.preventDefault()
+        return
+    } 
+}
 </script>
 
 <style lang="scss" scoped>
@@ -182,6 +221,14 @@ const store = useCounterStore()
     &__input {
         position: relative;
         max-width: 700px;
+
+        .error {
+            border: 1px solid rgb(251, 68, 68);
+
+            &::placeholder {
+                color: rgb(251, 68, 68);
+            }
+        }
 
         svg {
             position: absolute;
