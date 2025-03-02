@@ -43,7 +43,7 @@
             <div class="form__footer">
                 <div class="form__btns">
                     <button class="form__send">Отправить</button>
-                    <button class="form__closed" @click="store.closeModal">Отменить</button>
+                    <button type="button" class="form__closed" @click="store.closeModal">Отменить</button>
                 </div>
                 <div class="form__check">
                     <label for="check">Соглашаюсь с <a href="">обработкой персональных данных</a></label>
