@@ -132,7 +132,16 @@ onMounted(() => {
             store.closeModal();
       }
 })
+
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    closed()
+    v$.value.$reset();
+    v1$.value.$reset();
+  }
+});
 })
+
 </script>
 
 <style lang="scss" scoped>
