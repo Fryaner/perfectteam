@@ -127,17 +127,15 @@ function closed() {
 }
 
 onMounted(() => {
-    document.body.addEventListener('mousedown', function test(event) {
-        if (event.target.className === 'form-container') {
-            store.closeModal();
-      }
+document.body.addEventListener('mousedown', function test(event) {
+    if (event.target.className === 'form-container') {
+        store.closeModal();
+    }
 })
 
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
     closed()
-    v$.value.$reset();
-    v1$.value.$reset();
   }
 });
 })
