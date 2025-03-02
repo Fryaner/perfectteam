@@ -48,12 +48,17 @@
             <div class="faq__image">
                 <img src="@/assets/images/faq.png" alt=""/>
                 <div class="faq__btn">
-                    <button>Задать вопрос</button>
+                    <button @click="store.targetModal('Задать вопрос')">Задать вопрос</button>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import {useCounterStore} from '@/store/index'
+const store = useCounterStore()
+</script>
 
 <style lang="scss">
 .faq {

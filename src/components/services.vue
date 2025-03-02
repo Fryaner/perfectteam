@@ -17,7 +17,7 @@
                     </ul>
                 </div>
                 <div class="services__btn">
-                    <button>Заказать услугу</button>
+                    <button @click="store.targetModal('Заказать услугу', 'Подбор квалифицированного и рабочего персонала по России и СНГ')">Заказать услугу</button>
                 </div>
             </div>
             <div class="services__item">
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="services__btn">
-                    <button>Заказать услугу</button>
+                    <button @click="store.targetModal('Заказать услугу', 'Полное кадровое сопровождение компании')">Заказать услугу</button>
                 </div>
             </div>
             <div class="services__item">
@@ -55,12 +55,17 @@
                     </ul>
                 </div>
                 <div class="services__btn">
-                    <button>Заказать услугу</button>
+                    <button @click="store.targetModal('Заказать услугу', 'Комплексное консультирование')">Заказать услугу</button>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import {useCounterStore} from '@/store/index'
+const store = useCounterStore()
+</script>
 
 <style lang="scss" scoped>
 .services {

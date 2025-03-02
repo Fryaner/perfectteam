@@ -29,11 +29,16 @@
                 </div>
             </div>
             <div class="stage__btn">
-                <button>Начать сотрудничество</button>
+                <button @click="store.targetModal('Начать сотрудничество')">Начать сотрудничество</button>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import {useCounterStore} from '@/store/index'
+const store = useCounterStore()
+</script>
 
 <style lang="scss" scoped>
 .stage {

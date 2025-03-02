@@ -17,7 +17,7 @@
                         </ul>
                         <p class="price__description">Гарантийный срок: 90 дней — однократная замена специалиста в течение гарантийного срока производится без дополнительного вознаграждения.</p>                         
                     </div>
-                    <button class="price__btn">Оставить заявку</button>
+                    <button @click="store.targetModal('СТОИМОСТЬ УСЛУГ ПО ПОДБОРУ ПЕРСОНАЛА', 'Договор «Экономичный»')" class="price__btn">Оставить заявку</button>
                 </div>
                 <div class="price__item">
                     <div class="price__image">
@@ -31,7 +31,7 @@
                         </ul>
                         <p class="price__description">Гарантийный срок: 60 дней — однократная замена специалиста в течение гарантийного срока бесплатно.</p>                         
                     </div>
-                    <button class="price__btn">Оставить заявку</button>
+                    <button @click="store.targetModal('СТОИМОСТЬ УСЛУГ ПО ПОДБОРУ ПЕРСОНАЛА', 'Договор «Стандартный»')" class="price__btn">Оставить заявку</button>
                 </div>
             </div>
             <div class="price__section">
@@ -49,7 +49,7 @@
                         </ul>
                         <p class="price__description">Гарантийный срок: 30 дней — однократная замена специалиста в течение гарантийного срока бесплатно.</p>                         
                     </div>
-                    <button class="price__btn">Оставить заявку</button>
+                    <button @click="store.targetModal('СТОИМОСТЬ УСЛУГ ПО ПОДБОРУ ПЕРСОНАЛА', 'Стоимость подбора за одну вакансию')" class="price__btn">Оставить заявку</button>
                 </div>
                 <div class="price__item price__item-to">
                     <div class="price__image">
@@ -64,7 +64,7 @@
                         </ul>
                         <p class="price__description">Гарантийный срок: 30 дней — однократная замена специалиста в течение гарантийного срока бесплатно.</p>                         
                     </div>
-                    <button class="price__btn">Оставить заявку</button>
+                    <button @click="store.targetModal('СТОИМОСТЬ УСЛУГ ПО ПОДБОРУ ПЕРСОНАЛА', 'Стоимость подбора за одну вакансию на рабочие специальности')" class="price__btn">Оставить заявку</button>
                 </div>
             </div>
             <div class="price__section">
@@ -82,7 +82,7 @@
                         </ul>
                         <p class="price__description">Гарантийный период: от 30 дней на вакансии с опытом работы. Без гарантийного периода на вакансии без опыта работы.</p>                         
                     </div>
-                    <button class="price__btn">Оставить заявку</button>
+                    <button @click="store.targetModal('МАССОВЫЙ ПОДБОР ПЕРСОНАЛА', 'Стоимость подбора за каждого трудоустроенного сотрудника')" class="price__btn">Оставить заявку</button>
                 </div>
             </div>
             <div class="price__section-2 mb-40" id="begin-show">
@@ -93,14 +93,14 @@
                         <h4 class="price__subtitle-2">От 1 до 30 сотрудников</h4>
                         <div class="price__bottom">
                             <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                            <button class="price__btn">Оставить заявку</button>
+                            <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'От 1 до 30 сотрудников')" class="price__btn">Оставить заявку</button>
                         </div>
                     </div>
                     <div class="price__item-2">
                         <h4 class="price__subtitle-2">От 31 до 60 сотрудников</h4>
                         <div class="price__bottom">
                             <p class="price__price">Стоимость: 150 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                            <button class="price__btn">Оставить заявку</button>
+                            <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'От 31 до 60 сотрудников')" class="price__btn">Оставить заявку</button>
                         </div>
                     </div>
                 </div>
@@ -113,14 +113,14 @@
                             <h4 class="price__subtitle-2">Кадровые документы (приказы, личные карточки, журналы) за документ</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ВОССТАНОВЛЕНИЕ КАДРОВОГО УЧЕТА', 'Кадровые документы (приказы, личные карточки, журналы) за документ')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Кадровые документы  (положения, инструкции) за документ</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 7 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'Кадровые документы  (положения, инструкции) за документ')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -132,21 +132,21 @@
                             <h4 class="price__subtitle-2">Полный психологический портрет соискателя</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ТЕСТИРОВАНИЕ ПЕРСОНАЛА', 'Полный психологический портрет соискателя')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">От 1-4 кандидатов</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 17 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ТЕСТИРОВАНИЕ ПЕРСОНАЛА', 'От 1-4 кандидатов')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Более 5 кандидатов</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 16 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ТЕСТИРОВАНИЕ ПЕРСОНАЛА', 'Более 5 кандидатов')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -155,38 +155,38 @@
                     <h3 class="price__title-2">Миграционное сопровождение сотрудников</h3>
                     <div class="price__items-2">
                         <div class="price__item-2">
-                            <h4 class="price__subtitle-2">Проверим действительность патента   </h4>
+                            <h4 class="price__subtitle-2">Проверим действительность патента</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('Миграционное сопровождение сотрудников', 'Проверим действительность патента')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Ежемесячный мониторинг сроков действия разрешительных документов</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ТЕСТИРОВАНИЕ ПЕРСОНАЛА', 'Ежемесячный мониторинг сроков действия разрешительных документов')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Подадим уведомление в МВД о приеме / увольнении мигранта</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('Миграционное сопровождение сотрудников', 'Подадим уведомление в МВД о приеме / увольнении мигранта')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Проведем аудит договора с сотрудником-иностранцем</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 3 000 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ТЕСТИРОВАНИЕ ПЕРСОНАЛА', 'Проведем аудит договора с сотрудником-иностранцем')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Комплекс вышеназванных услуг</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 6 500 <img src="@/assets/icons/ruble.svg" alt=""/> за сотрудника</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('ТЕСТИРОВАНИЕ ПЕРСОНАЛА', 'Комплекс вышеназванных услуг')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
                         <div class="price__item-2">
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('КОНСУЛЬТАЦИЯ КЛИНИЧЕСКОГО ПСИХОЛОГА')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -209,21 +209,21 @@
                             <h4 class="price__subtitle-2">До 20 штатных сотрудников</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 35 000 <img src="@/assets/icons/ruble.svg" alt=""/> в месяц</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('КОНСУЛЬТАЦИЯ КЛИНИЧЕСКОГО ПСИХОЛОГА', 'До 20 штатных сотрудников')"  class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">От 21 до 50 штатных сотрудников</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 40 000 <img src="@/assets/icons/ruble.svg" alt=""/> в месяц</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('КОНСУЛЬТАЦИЯ КЛИНИЧЕСКОГО ПСИХОЛОГА', 'От 21 до 50 штатных сотруднико')"  class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">От 51 до 100 штатных сотрудников</h4>
                             <div class="price__bottom">
                                 <p class="price__price">Стоимость: 45 000 <img src="@/assets/icons/ruble.svg" alt=""/> в месяц</p>
-                                <button class="price__btn">Оставить заявку</button>
+                                <button @click="store.targetModal('КОНСУЛЬТАЦИЯ КЛИНИЧЕСКОГО ПСИХОЛОГА', 'От 51 до 100 штатных сотрудников')"  class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -239,6 +239,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import {useCounterStore} from '@/store/index'
+const store = useCounterStore()
 
 const isActive = ref(false)
 

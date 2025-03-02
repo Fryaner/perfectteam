@@ -6,7 +6,7 @@
                 <p class="banner__description">Полный цикл услуг по подбору, оценке и ведению кадрового учета для Вашего бизнеса</p>
             </section>
             <div class="banner__btn">
-                <button>Получить консультацию</button>
+                <button @click="store.targetModal('Получить консультацию')">Получить консультацию</button>
             </div>
         </div>
         <form class="banner__form">
@@ -38,6 +38,9 @@ import phone from '@/assets/icons/phone.vue'
 import comment from '@/assets/icons/comment.vue'
 import user from '@/assets/icons/user.vue'
 import mail from '@/assets/icons/mail.vue'
+
+import {useCounterStore} from '@/store/index'
+const store = useCounterStore()
 </script>
 
 <style lang="scss" scoped>

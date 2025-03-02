@@ -4,8 +4,10 @@
         <section class="form">
         <img @click="store.closeModal" class="form__close" src="@/assets/icons/close.svg" alt=""/>
         <div class="form__header">
-            <p class="form__title">{{store.type ===  1 ? 'Получить консультацию' : 'Заказать услугу'}}</p>
-            <p class="form__subtitle" v-if="store.type === 2">{{ store.service }}</p>
+            <p class="form__title">{{store.type}}</p>
+            <input v-show="false" v-model="store.type" name="Тип Заявки"/>
+            <p class="form__subtitle" v-if="store.service">{{ store.service }}</p>
+            <input v-show="false" v-model="store.service" name="Услуга"/>
         </div>
         <form class="form__form">
             <div class="form__list">
@@ -30,6 +32,13 @@
                         <input type="text" id="mail"/>
                     </div>
                 </div>
+                <div v-if="store.type === 'Задать вопрос'" class="form__input">
+                    <label for="qusetion">Вопрос</label>
+                    <div class="form__mail">
+                        <comment/>
+                        <input type="text" id="qusetion"/>
+                    </div>
+                </div>
             </div>
             <div class="form__footer">
                 <div class="form__btns">
@@ -51,6 +60,7 @@
 import user from '@/assets/icons/user.vue';
 import phone from '@/assets/icons/phone.vue';
 import mail from '@/assets/icons/mail.vue';
+import comment from '@/assets/icons/comment.vue';
 import { useCounterStore } from '@/store';
 import { onMounted } from 'vue';
 

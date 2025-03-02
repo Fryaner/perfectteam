@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="about__btn">
-                <button>Узнать больше</button>
+                <button @click="store.targetModal('Узнать больше о нас')">Узнать больше</button>
             </div>
         </div>
     </section>
@@ -37,6 +37,8 @@
 </template>
 
 <script setup>
+import {useCounterStore} from '@/store/index'
+const store = useCounterStore()
 </script>
 
 <style lang="scss" scoped>
