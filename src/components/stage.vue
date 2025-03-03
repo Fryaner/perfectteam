@@ -5,7 +5,7 @@
             <div class="stage__items">
                 <div class="stage__item">
                     <p class="stage__title"><img src="@/assets/icons/circlecheck.svg" alt=""/>1 Этап</p>
-                    <p class="stage__description">После Вашего обращения проводим анализ рынка кандидатов, разрабатываем стратегию найма, даем оценку стоимости работы</p>
+                    <p class="stage__description">После Вашего обращения проводим анализ рынка кандидатов, разрабатываем стратегию найма, даем оценку стоимости работы;</p>
                 </div>
                 <div class="stage__item">
                     <p class="stage__title"><img src="@/assets/icons/circlecheck.svg" alt=""/>2 Этап</p>
@@ -13,7 +13,7 @@
                 </div>
                 <div class="stage__item">
                     <p class="stage__title"><img src="@/assets/icons/circlecheck.svg" alt=""/>3 Этап</p>
-                    <p class="stage__description">Разрабатываем профиль кандидата, создаем вакансию, определяем условия и каналы поиска</p>
+                    <p class="stage__description">Разрабатываем профиль кандидата, создаем вакансию, определяем условия и каналы поиска;</p>
                 </div>
                 <div class="stage__item">
                     <p class="stage__title"><img src="@/assets/icons/circlecheck.svg" alt=""/>4 Этап</p>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="stage__item">
                     <p class="stage__title"><img src="@/assets/icons/circlecheck.svg" alt=""/>5 Этап</p>
-                    <p class="stage__description">Утверждаем кандидата, готовим и направляем оффер</p>
+                    <p class="stage__description">Утверждаем кандидата, готовим и направляем оффер;</p>
                 </div>
                 <div class="stage__item">
                     <p class="stage__title"><img src="@/assets/icons/circlecheck.svg" alt=""/>6 Этап</p>
