@@ -70,12 +70,11 @@ gsap.registerPlugin(ScrollTrigger);
         titleElement.forEach((item) => {
         gsap.from(item,
             {
-            opacity: 0,
-            x: '-100%',
-            duration: 1,
+            x: '-110%',
+            duration: .5,
             scrollTrigger: {
                 trigger: item,
-                start: 'top 90%',
+                start: 'top 100%',
                 end: 'bottom 20%',
                 toggleActions: "play none none reverse",
                 markers: false
