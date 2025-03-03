@@ -20,7 +20,7 @@
                             Какие гарантии вы предоставляете?
                         </template>
                         <template v-slot:answer>
-                            Гарантии  по договору от 30 дней до 90 дней.
+                            Гарантии по договору от 30 дней до 90 дней.
                         </template>
                     </Accordeon>
                 </div>
@@ -30,7 +30,7 @@
                             Как происходит оплата?
                         </template>
                         <template v-slot:answer>
-                            Гибкая система оплаты .
+                            Гибкая система оплаты.
                         </template>
                     </Accordeon>
                 </div>
@@ -40,7 +40,7 @@
                             Можно ли заказать только часть услуг?
                         </template>
                         <template v-slot:answer>
-                            Да ,можно.
+                            Да, можно.
                         </template>
                     </Accordeon>
                 </div>

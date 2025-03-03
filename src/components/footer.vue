@@ -62,12 +62,12 @@
     }
 
     &__title {
-        font-size: 32px;
+        font-size: 16px;
         letter-spacing: 1px;
         text-align: center;
 
         @media screen and (max-width: $limit-mobile) {
-            font-size: 24px;
+            font-size: 14px;
         }
     }
 }

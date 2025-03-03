@@ -87,7 +87,7 @@
             </div>
             <div class="price__section-2 mb-40" id="begin-show">
                 <h3 class="price__title-2">КАДРОВЫЙ АУДИТ</h3>
-                <div class="price__items-2">
+                <div class="price__items-2 price__items-one">
                     <div class="price__item-2">
                         <h4 class="price__subtitle-2">Стоимость рассчитывается индивидуально. Назвать точную цену может специалист после предварительного анализа.</h4>
                         <p class="price__to">Аудит обойдется вам дешевле, чем штрафные санкции в случае выявления проблем контролирующими органами.</p>
@@ -512,6 +512,14 @@ function showOther() {
        @media screen  and (max-width: $limit-tablet){
         grid-template-columns: 1fr;
        }
+    }
+
+    &__items-one {
+        display: grid;
+        grid-template-columns: 1fr;
+       column-gap: 80px;
+       row-gap: 30px;
+       padding: 0 10px;
     }
 
     &__item-2 {

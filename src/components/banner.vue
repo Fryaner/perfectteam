@@ -2,8 +2,8 @@
     <div class="banner" id="main">
         <div class="banner__info">
             <section class="banner__top" ref="topText">
-                <h1 class="banner__title">Профессионалы для вашего бизнеса!</h1>
-                <p class="banner__description">Полный цикл услуг по подбору, оценке и ведению кадрового учета для Вашего бизнеса</p>
+                <h1 class="banner__title">Кадровое агентство «Perfect Team»– «Не просто подбор, а полный цикл заботы о ваших кадрах!» </h1>
+                <p class="banner__description">Предоставляем полный цикл услуг по подбору, оценке и ведению кадрового учета.</p>
             </section>
             <div class="banner__btn" ref="btn">
                 <button @click="store.targetModal('Получить консультацию')">Получить консультацию</button>
