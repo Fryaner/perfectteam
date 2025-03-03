@@ -1,7 +1,7 @@
 <template>
 <header class="header">
   <div class="header__logo">
-    <img src="@/assets/icons/logo.png" alt=""/>
+    <img src="@/assets/icons/logo.webp" alt=""/>
   </div>
   <div class="header__info" :class="{active: store.isActive}">
     <nav class="header__nav">

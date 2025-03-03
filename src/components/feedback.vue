@@ -5,7 +5,7 @@
             <h3 class="feedback__title">Оставьте заявку, и мы свяжемся с вами</h3>
             <form action="https://formspree.io/f/mjkgnjqg" method="POST" @submit="send" class="feedback__form">
                 <div class="feedback__image">
-                    <img src="@/assets/images/feedback.png" alt=""/>
+                    <img src="@/assets/images/feedback.webp" alt=""/>
                 </div>
                 <div class="feedback__input feedback__input-user">
                     <label :class="{ errorText: v$.user.$errors.length }" for="user">Имя</label>

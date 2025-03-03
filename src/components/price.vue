@@ -6,7 +6,7 @@
                 <h3 class="price__title">СТОИМОСТЬ УСЛУГ ПО ПОДБОРУ ПЕРСОНАЛА</h3>
                 <div class="price__item">
                     <div class="price__image">
-                        <img src="@/assets/images/priceEconom.png" alt=""/>
+                        <img src="@/assets/images/priceEconom.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Договор «Экономичный»</h4>
                     <div class="price__info">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="price__item">
                     <div class="price__image">
-                        <img src="@/assets/images/priceStandart.png" alt=""/>
+                        <img src="@/assets/images/priceStandart.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Договор «Стандартный»</h4>
                     <div class="price__info">
@@ -38,7 +38,7 @@
                 <h3 class="price__title">ПОДБОР ЛИНЕЙНОГО ПЕРСОНАЛА</h3>
                 <div class="price__item price__item-to">
                     <div class="price__image">
-                        <img src="@/assets/images/priceOne.png" alt=""/>
+                        <img src="@/assets/images/priceOne.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за одну вакансию</h4>
                     <p class="price__to">от 60 000 рублей.</p>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="price__item price__item-to">
                     <div class="price__image">
-                        <img src="@/assets/images/priceOneSpecial.png" alt=""/>
+                        <img src="@/assets/images/priceOneSpecial.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за одну вакансию на рабочие специальности</h4>
                     <p class="price__to">от 50 000 рублей.</p>
@@ -71,7 +71,7 @@
                 <h3 class="price__title">МАССОВЫЙ ПОДБОР ПЕРСОНАЛА</h3>
                 <div class="price__item price__item-to">
                     <div class="price__image">
-                        <img src="@/assets/images/priceMany.png" alt=""/>
+                        <img src="@/assets/images/priceMany.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за каждого трудоустроенного сотрудника</h4>
                     <p class="price__to">от 40 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников.</p>

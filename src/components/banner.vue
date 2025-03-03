@@ -102,7 +102,7 @@ async function send(event) {
     padding: 30px 30px 100px 30px;
     display: flex;
     justify-content: space-between;
-    background-image: url('@/assets/images/banner.png');
+    background-image: url('@/assets/images/banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

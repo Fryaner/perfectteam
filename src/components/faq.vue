@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="faq__image">
-                <img src="@/assets/images/faq.png" alt=""/>
+                <img src="@/assets/images/faq.webp" alt=""/>
                 <div class="faq__btn">
                     <button @click="store.targetModal('Задать вопрос')">Задать вопрос</button>
                 </div>
