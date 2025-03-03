@@ -104,7 +104,7 @@ const v$ = useVuelidate(rules, state)
 async function send(event) {
     const result = await v$.value.$validate()
     const resultComment = await v1$.value.$validate()
-    if (!result && !resultComment) {
+    if (!result || !resultComment) {
         event.preventDefault()
         return
     } 

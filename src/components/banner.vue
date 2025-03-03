@@ -9,7 +9,7 @@
                 <button @click="store.targetModal('Получить консультацию')">Получить консультацию</button>
             </div>
         </div>
-        <form autocomplete="off" action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="banner__form" ref="form">
+        <form autocomplete="off" action="https://formspree.io/f/mjkgnjqg" method="POST" @submit="send" class="banner__form" ref="form">
             <div class="banner__inputs">
                 <div class="banner__input">
                     <user/>
@@ -90,7 +90,7 @@ const v$ = useVuelidate(rules, state)
 async function send(event) {
     const result = await v$.value.$validate()
     const resultComment = await v1$.value.$validate()
-    if (!result && !resultComment) {
+    if (!result || !resultComment) {
         event.preventDefault()
         return
     } 
