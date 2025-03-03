@@ -8,9 +8,9 @@
         <div class="footer__other">
             <p class="footer__site">www perfectteam.pro</p>
             <div class="footer__social">
-                <a href=""><img src="@/assets/icons/wa.svg" alt=""/></a>
-                <a href=""><img src="@/assets/icons/vk.svg" alt=""/></a>
-                <a href=""><img src="@/assets/icons/tg.svg" alt=""/></a>
+                <a href="" aria-label="whatsapp"><img src="@/assets/icons/wa.svg" alt=""/></a>
+                <a href="" aria-label="vk"><img src="@/assets/icons/vk.svg" alt=""/></a>
+                <a href="" aria-label="tg"><img src="@/assets/icons/tg.svg" alt=""/></a>
             </div>
             <p class="footer__title">PERFECT TEAM © 2025. All Rights Reserved.</p>
         </div>
