@@ -64,30 +64,7 @@
 
 <script setup>
 import {useCounterStore} from '@/store/index'
-import { onMounted } from 'vue';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 const store = useCounterStore()
-
-onMounted(() => {
-        const servicesItem = document.querySelectorAll('.services__item')
-
-        servicesItem.forEach((item) => {
-        gsap.from(item,
-            {
-            x: '-110%',
-            duration: .5,
-            scrollTrigger: {
-                trigger: item,
-                start: 'top 100%',
-                end: 'bottom 20%',
-                toggleActions: "play none none reverse",
-                markers: false,
-            }
-            }
-        );
-        })
-    });
 </script>
 
 <style lang="scss" scoped>
