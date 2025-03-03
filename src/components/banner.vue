@@ -2,7 +2,7 @@
     <div class="banner" id="main">
         <div class="banner__info">
             <section class="banner__top" ref="topText">
-                <h1 class="banner__title">Кадровое агентство «Perfect Team»– «Не просто подбор, а полный цикл заботы о ваших кадрах!» </h1>
+                <h1 class="banner__title">Кадровое агентство «Perfect Team»– «Не просто подбор, а полный цикл заботы о ваших кадрах!»</h1>
                 <p class="banner__description">Предоставляем полный цикл услуг по подбору, оценке и ведению кадрового учета.</p>
             </section>
             <div class="banner__btn" ref="btn">
