@@ -1,8 +1,36 @@
 <template>
     <div class="container">
-        <h2 class="title"><slot></slot></h2>
+        <h2 class="title" ref="titleElement"><slot></slot></h2>
     </div>
 </template>
+
+<script setup>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from 'vue';
+
+gsap.registerPlugin(ScrollTrigger);
+
+    const titleElement = ref(null);
+
+    onMounted(() => {
+      gsap.from(titleElement.value,
+        {
+          opacity: 0,
+          x: '-100%',
+          duration: 1,
+          scrollTrigger: {
+            trigger: titleElement.value,
+            start: 'top 90%',
+            end: 'bottom 20%',
+            toggleActions: "play none none reverse",
+            markers: false
+          }
+        }
+      );
+    });
+
+</script>
 
 <style lang="scss" scoped>
 .container {

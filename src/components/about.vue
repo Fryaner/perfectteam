@@ -38,7 +38,52 @@
 
 <script setup>
 import {useCounterStore} from '@/store/index'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted } from 'vue';
 const store = useCounterStore()
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+    onMounted(() => {
+        const titleElement = document.querySelectorAll('.about__item')
+        const btn = document.querySelectorAll('.about__btn')
+
+        btn
+
+        gsap.from(btn,
+            {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: btn,
+                start: 'top 100%',
+                end: 'bottom 20%',
+                toggleActions: "play none none reverse",
+                markers: false
+            }
+            }
+        );
+
+        titleElement.forEach((item) => {
+        gsap.from(item,
+            {
+            opacity: 0,
+            x: '-100%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 90%',
+                end: 'bottom 20%',
+                toggleActions: "play none none reverse",
+                markers: false
+            }
+            }
+        );
+        })
+    });
 </script>
 
 <style lang="scss" scoped>

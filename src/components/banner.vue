@@ -1,15 +1,15 @@
 <template>
     <div class="banner" id="main">
         <div class="banner__info">
-            <section class="banner__top">
+            <section class="banner__top" ref="topText">
                 <h1 class="banner__title">Профессионалы для вашего бизнеса!</h1>
                 <p class="banner__description">Полный цикл услуг по подбору, оценке и ведению кадрового учета для Вашего бизнеса</p>
             </section>
-            <div class="banner__btn">
+            <div class="banner__btn" ref="btn">
                 <button @click="store.targetModal('Получить консультацию')">Получить консультацию</button>
             </div>
         </div>
-        <form autocomplete="off" action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="banner__form">
+        <form autocomplete="off" action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="banner__form" ref="form">
             <div class="banner__inputs">
                 <div class="banner__input">
                     <user/>
@@ -39,9 +39,11 @@ import comment from '@/assets/icons/comment.vue'
 import user from '@/assets/icons/user.vue'
 import mail from '@/assets/icons/mail.vue'
 import {useCounterStore} from '@/store/index'
-import { reactive } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const store = useCounterStore()
 
@@ -68,6 +70,19 @@ function formatPhoneNumber() {
     state.phone = state.phone.slice(0, 11);
     }
 }
+
+const topText = ref(null);
+const btn = ref(null);
+const form = ref(null);
+
+onMounted(() => {
+  const timeline = gsap.timeline()
+
+  timeline.from(topText.value, { opacity: 0, x: '-100%', duration: 1 })
+  timeline.from(btn.value, { opacity: 0, y: 50, duration: .5 })
+  timeline.from(form.value, { opacity: 0, x: '100%', duration: 1 })
+
+});
 
 const v1$ = useVuelidate(rule, state1)
 const v$ = useVuelidate(rules, state)
