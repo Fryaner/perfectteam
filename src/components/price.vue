@@ -6,7 +6,7 @@
                 <h3 class="price__title">СТОИМОСТЬ УСЛУГ ПО ПОДБОРУ ПЕРСОНАЛА</h3>
                 <div class="price__item">
                     <div class="price__image">
-                        <img src="@/assets/images/priceEconom.png" alt=""/>
+                        <img src="@/assets/images/priceEconom.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Договор «Экономичный»</h4>
                     <div class="price__info">
@@ -21,13 +21,13 @@
                 </div>
                 <div class="price__item">
                     <div class="price__image">
-                        <img src="@/assets/images/priceStandart.png" alt=""/>
+                        <img src="@/assets/images/priceStandart.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Договор «Стандартный»</h4>
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>От 12% от годового дохода специалиста. По договору работаем в параллели с другими агентствами.</li>
-                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Оплата производится по факту выхода сотрудника на работу в компанию заказчика. подразумевает, что мы работаем в параллели с другими агентствами.</li>
+                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Оплата производится по факту выхода сотрудника на работу в компанию заказчика.</li>
                         </ul>
                         <p class="price__description">Гарантийный срок: 60 дней — однократная замена специалиста в течение гарантийного срока бесплатно.</p>                         
                     </div>
@@ -38,7 +38,7 @@
                 <h3 class="price__title">ПОДБОР ЛИНЕЙНОГО ПЕРСОНАЛА</h3>
                 <div class="price__item price__item-to">
                     <div class="price__image">
-                        <img src="@/assets/images/priceOne.png" alt=""/>
+                        <img src="@/assets/images/priceOne.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за одну вакансию</h4>
                     <p class="price__to">от 60 000 рублей.</p>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="price__item price__item-to">
                     <div class="price__image">
-                        <img src="@/assets/images/priceOneSpecial.png" alt=""/>
+                        <img src="@/assets/images/priceOneSpecial.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за одну вакансию на рабочие специальности</h4>
                     <p class="price__to">от 50 000 рублей.</p>
@@ -71,10 +71,10 @@
                 <h3 class="price__title">МАССОВЫЙ ПОДБОР ПЕРСОНАЛА</h3>
                 <div class="price__item price__item-to">
                     <div class="price__image">
-                        <img src="@/assets/images/priceMany.png" alt=""/>
+                        <img src="@/assets/images/priceMany.webp" alt=""/>
                     </div>
-                    <h4 class="price__subtitle">Стоимость подбора за каждого трудоустроенного сотрудника</h4>
-                    <p class="price__to">от 40 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников</p>
+                    <h4 class="price__subtitle">Стоимость подбора за каждого трудоустроенного сотрудника</h4>
+                    <p class="price__to">от 40 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников.</p>
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 10% от суммы гонорара агентства. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
@@ -87,20 +87,12 @@
             </div>
             <div class="price__section-2 mb-40" id="begin-show">
                 <h3 class="price__title-2">КАДРОВЫЙ АУДИТ</h3>
-                <p class="price__description-2">Анализ по типичным ошибкам (делается на основании выборки кадровых документов без анализа каждого документа по каждому работнику)</p>
-                <div class="price__items-2">
+                <div class="price__items-2 price__items-one">
                     <div class="price__item-2">
-                        <h4 class="price__subtitle-2">От 1 до 30 сотрудников</h4>
+                        <h4 class="price__subtitle-2">Стоимость рассчитывается индивидуально. Назвать точную цену может специалист после предварительного анализа.</h4>
+                        <p class="price__to">Аудит обойдется вам дешевле, чем штрафные санкции в случае выявления проблем контролирующими органами.</p>
                         <div class="price__bottom">
-                            <p class="price__price">Стоимость: 5 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                            <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'От 1 до 30 сотрудников')" class="price__btn">Оставить заявку</button>
-                        </div>
-                    </div>
-                    <div class="price__item-2">
-                        <h4 class="price__subtitle-2">От 31 до 60 сотрудников</h4>
-                        <div class="price__bottom">
-                            <p class="price__price">Стоимость: 150 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
-                            <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'От 31 до 60 сотрудников')" class="price__btn">Оставить заявку</button>
+                            <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'Индивидуальный расчёт')" class="price__btn">Оставить заявку</button>
                         </div>
                     </div>
                 </div>
@@ -112,14 +104,14 @@
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Кадровые документы (приказы, личные карточки, журналы) за документ</h4>
                             <div class="price__bottom">
-                                <p class="price__price">Стоимость: 1 500 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <p class="price__price">Стоимость: от 1 500 <img src="@/assets/icons/ruble.svg" alt=""/></p>
                                 <button @click="store.targetModal('ВОССТАНОВЛЕНИЕ КАДРОВОГО УЧЕТА', 'Кадровые документы (приказы, личные карточки, журналы) за документ')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
                         <div class="price__item-2">
                             <h4 class="price__subtitle-2">Кадровые документы  (положения, инструкции) за документ</h4>
                             <div class="price__bottom">
-                                <p class="price__price">Стоимость: 7 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
+                                <p class="price__price">Стоимость: от 7 000 <img src="@/assets/icons/ruble.svg" alt=""/></p>
                                 <button @click="store.targetModal('КАДРОВЫЙ АУДИТ', 'Кадровые документы  (положения, инструкции) за документ')" class="price__btn">Оставить заявку</button>
                             </div>
                         </div>
@@ -520,6 +512,14 @@ function showOther() {
        @media screen  and (max-width: $limit-tablet){
         grid-template-columns: 1fr;
        }
+    }
+
+    &__items-one {
+        display: grid;
+        grid-template-columns: 1fr;
+       column-gap: 80px;
+       row-gap: 30px;
+       padding: 0 10px;
     }
 
     &__item-2 {

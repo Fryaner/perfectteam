@@ -28,7 +28,7 @@
                     <h3 class="services__title" >Полное кадровое сопровождение компании</h3>
                     <ul class="services__list">
                         <li class="services__description"><img src="@/assets/icons/check.svg" alt=""/>Отдел HR в аренду.</li>
-                        <li class="services__description"><img src="@/assets/icons/check.svg" alt=""/>Проведение консультаций по кадровым вопросам и трудовому.</li>
+                        <li class="services__description"><img src="@/assets/icons/check.svg" alt=""/>Проведение консультаций по кадровым вопросам и трудовому праву.</li>
                         <li class="services__description"><img src="@/assets/icons/check.svg" alt=""/>Кадровый аудит.</li>
                         <li class="services__description"><img src="@/assets/icons/check.svg" alt=""/>Разработка должностных инструкций и локальных нормативных актов.</li>
                         <li class="services__description"><img src="@/assets/icons/check.svg" alt=""/>Восстановление кадрового учёта.</li>

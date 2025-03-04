@@ -7,7 +7,7 @@
             <p class="form__title">{{store.type}}</p>
             <p class="form__subtitle" v-if="store.service">{{ store.service }}</p>
         </div>
-        <form action="https://formspree.io/f/mrbeyypl" method="POST" class="form__form" @submit="send">
+        <form action="https://formspree.io/f/mjkgnjqg" method="POST" class="form__form" @submit="send">
             <input v-show="false" v-model="store.type" name="Тип Заявки"/>
             <input v-show="false" v-model="store.service" name="Услуга"/>
             <div class="form__list">
@@ -104,7 +104,7 @@ const v$ = useVuelidate(rules, state)
 async function send(event) {
     const result = await v$.value.$validate()
     const resultComment = await v1$.value.$validate()
-    if (!result && !resultComment) {
+    if (!result || !resultComment) {
         event.preventDefault()
         return
     } 

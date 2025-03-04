@@ -15,7 +15,7 @@ function scrollTop() {
 <template>
   <div class="wrapper">
     <Modal/>
-    <button @click="scrollTop" class="scroll"><ArrowTop/></button>
+    <button @click="scrollTop" class="scroll" title="Scroll"><ArrowTop/></button>
     <Header/>
     <main class="main">
       <Main/>

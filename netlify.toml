@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://perfectteam.netlify.app/*"
+  to = "https://perfectteam.pro/:splat"  # Замените на ваш основной домен
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://perfectteam.netlify.app/*"  # Добавьте правило для HTTP
+  to = "https://perfectteam.pro/:splat"  # Замените на ваш основной домен
+  status = 301
+  force = true

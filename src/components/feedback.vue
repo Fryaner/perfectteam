@@ -3,9 +3,9 @@
         <Title>НУЖНЫ КАЧЕСТВЕННЫЕ СОТРУДНИКИ В КОМАНДУ?</Title>
         <div class="feedback__main">
             <h3 class="feedback__title">Оставьте заявку, и мы свяжемся с вами</h3>
-            <form action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="feedback__form">
+            <form action="https://formspree.io/f/mjkgnjqg" method="POST" @submit="send" class="feedback__form">
                 <div class="feedback__image">
-                    <img src="@/assets/images/feedback.png" alt=""/>
+                    <img src="@/assets/images/feedback.webp" alt=""/>
                 </div>
                 <div class="feedback__input feedback__input-user">
                     <label :class="{ errorText: v$.user.$errors.length }" for="user">Имя</label>
@@ -70,7 +70,7 @@ const v$ = useVuelidate(rules, state)
 async function send(event) {
     const result = await v$.value.$validate()
     const resultComment = await v1$.value.$validate()
-    if (!result && !resultComment) {
+    if (!result || !resultComment) {
         event.preventDefault()
         return
     } 

@@ -2,14 +2,14 @@
     <div class="banner" id="main">
         <div class="banner__info">
             <section class="banner__top" ref="topText">
-                <h1 class="banner__title">Профессионалы для вашего бизнеса!</h1>
-                <p class="banner__description">Полный цикл услуг по подбору, оценке и ведению кадрового учета для Вашего бизнеса</p>
+                <h1 class="banner__title">Кадровое агентство «Perfect Team»– «Не просто подбор, а полный цикл заботы о ваших кадрах!»</h1>
+                <p class="banner__description">Предоставляем полный цикл услуг по подбору, оценке и ведению кадрового учета.</p>
             </section>
             <div class="banner__btn" ref="btn">
                 <button @click="store.targetModal('Получить консультацию')">Получить консультацию</button>
             </div>
         </div>
-        <form autocomplete="off" action="https://formspree.io/f/mrbeyypl" method="POST" @submit="send" class="banner__form" ref="form">
+        <form autocomplete="off" action="https://formspree.io/f/mjkgnjqg" method="POST" @submit="send" class="banner__form" ref="form">
             <div class="banner__inputs">
                 <div class="banner__input">
                     <user/>
@@ -90,7 +90,7 @@ const v$ = useVuelidate(rules, state)
 async function send(event) {
     const result = await v$.value.$validate()
     const resultComment = await v1$.value.$validate()
-    if (!result && !resultComment) {
+    if (!result || !resultComment) {
         event.preventDefault()
         return
     } 
@@ -102,7 +102,7 @@ async function send(event) {
     padding: 30px 30px 100px 30px;
     display: flex;
     justify-content: space-between;
-    background-image: url('@/assets/images/banner.png');
+    background-image: url('@/assets/images/banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

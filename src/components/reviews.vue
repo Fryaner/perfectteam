@@ -1,5 +1,5 @@
 <template>
-    <section class="reviews">
+    <section v-if="false" class="reviews">
         <Title>ОТЗЫВЫ</Title>
         <div class="swiper">
     <div class="swiper-wrapper">
