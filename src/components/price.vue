@@ -12,7 +12,7 @@
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>От 8 % до 12% годового дохода специалиста. К поиску не подключаются другие агентства и/или своя служба персонала.</li>
-                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
+                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара.</li>
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Оплата 80% производится по факту выхода сотрудника на работу в компанию заказчика.</li>
                         </ul>
                         <p class="price__description">Гарантийный срок: 90 дней — однократная замена специалиста в течение гарантийного срока производится без дополнительного вознаграждения.</p>                         
@@ -59,7 +59,7 @@
                     <p class="price__to">от 50 000 рублей.</p>
                     <div class="price__info">
                         <ul class="price__list">
-                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара агентства оплачивается предварительная часть расходов на поиск. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
+                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара агентства оплачивается предварительная часть расходов на поиск.</li>
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Оплата 80% производится по факту выхода сотрудника на работу в компанию заказчика.</li>
                         </ul>
                         <p class="price__description">Гарантийный срок: 30 дней — однократная замена специалиста в течение гарантийного срока бесплатно.</p>                         
@@ -74,7 +74,7 @@
                         <img src="@/assets/images/priceMany.webp" alt=""/>
                     </div>
                     <h4 class="price__subtitle">Стоимость подбора за каждого трудоустроенного сотрудника</h4>
-                    <p class="price__to">от 40 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников.</p>
+                    <p class="price__to">от 40 000 рублей за одного сотрудника (при заказе от 5).</p>
                     <div class="price__info">
                         <ul class="price__list">
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 10% от суммы гонорара агентства.</li>
