@@ -546,6 +546,7 @@ function showOther() {
 
     &__subtitle-2 {
         font-size: 20px;
+        text-align: center;
 
         @media screen and (max-width: $limit-mobile) {
             font-size: 16px;  

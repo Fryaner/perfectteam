@@ -126,7 +126,7 @@ async function send(event) {
         content: '';
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.321);
+        // background-color: rgba(255, 255, 255, 0.321);
         z-index: -1;
     }
 
