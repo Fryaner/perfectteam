@@ -44,7 +44,7 @@
                     <p class="price__to">от 60 000 рублей.</p>
                     <div class="price__info">
                         <ul class="price__list">
-                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара агентства. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
+                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 20% от суммы гонорара агентства.</li>
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Оплата 80% производится по факту выхода сотрудника на работу в компанию заказчика.</li>
                         </ul>
                         <p class="price__description">Гарантийный срок: 30 дней — однократная замена специалиста в течение гарантийного срока бесплатно.</p>                         
@@ -77,7 +77,7 @@
                     <p class="price__to">от 40 000 рублей за одного сотрудника при заказе от 5 низкоквалифицированных сотрудников.</p>
                     <div class="price__info">
                         <ul class="price__list">
-                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 10% от суммы гонорара агентства. В случае отказа от поиска на любом этапе, сумма возврату не подлежит.</li>
+                            <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Предоплата 10% от суммы гонорара агентства.</li>
                             <li class="price__link"><img src="@/assets/icons/check1.svg" alt=""/>Оплата 90% производится по факту выхода сотрудника на работу в компанию заказчика.</li>
                         </ul>
                         <p class="price__description">Гарантийный период: от 30 дней на вакансии с опытом работы. Без гарантийного периода на вакансии без опыта работы.</p>                         
@@ -546,7 +546,6 @@ function showOther() {
 
     &__subtitle-2 {
         font-size: 20px;
-        text-align: center;
 
         @media screen and (max-width: $limit-mobile) {
             font-size: 16px;  
