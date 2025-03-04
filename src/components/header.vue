@@ -53,7 +53,7 @@ const store = useCounterStore()
 
         img {
             cursor: pointer;
-            width: 78px;
+            width: 90px;
             height: auto;
         }
     }
