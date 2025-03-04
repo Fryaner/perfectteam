@@ -102,7 +102,7 @@ async function send(event) {
     padding: 30px 30px 100px 30px;
     display: flex;
     justify-content: space-between;
-    background-image: url('@/assets/images/banner.webp');
+    background-image: url('@/assets/images/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -110,6 +110,7 @@ async function send(event) {
     gap: 20px;
 
     @media screen and (max-width: $limit-tablet){
+        background-position: center;
         flex-direction: column;
         gap: 30px;
         padding: 20px 20px 60px 20px;
@@ -126,7 +127,7 @@ async function send(event) {
         content: '';
         width: 100%;
         height: 100%;
-        // background-color: rgba(255, 255, 255, 0.321);
+        background-color: rgba(255, 255, 255, 0.321);
         z-index: -1;
     }
 
