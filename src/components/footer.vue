@@ -1,7 +1,7 @@
 <template>
     <footer class="footer" id="footer">
         <div class="footer__info">
-            <p class="footer__mail"><span>Email: </span><a href="mailto:hrperfectteam@yandex.ru" aria-label="mail1">hrperfectteam@yandex.ru</a>, <a href="mailto:hrfectteam@mail.ru" aria-label="mail2">hrfectteam@mail.ru</a></p>
+            <p class="footer__mail"><span>Email: </span><a href="mailto:hrperfectteam@yandex.ru" aria-label="mail1">hrperfectteam@yandex.ru</a>, <a href="mailto:hrdperfectteam@mail.ru" aria-label="mail2">hrdperfectteam@mail.ru</a></p>
             <p class="footer__phone"><span>Phone: </span><a href="tel:79017183460" aria-label="mail1">+7 901 718 34 60</a> </p>
             <p class="footer__timing">Мы работаем: Пн-Пт, 9:00-18:00</p>
         </div>
